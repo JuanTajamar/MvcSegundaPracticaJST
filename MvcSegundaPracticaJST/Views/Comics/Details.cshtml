@@ -1,0 +1,25 @@
+﻿@model Comic
+
+<h1>@Model.Nombre</h1>
+
+<a asp-controller="Comics" asp-action="Index" class="btn btn-primary">Volver a Home</a>
+
+<table class="table table-primary">
+    <thead>
+        <tr>
+            <th>ID Comic</th>
+            <th>Nombre</th>
+            <th>Imagen</th>
+            <th>Descripcion</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>@Model.IdComic</td>
+            <td>@Model.Nombre</td>
+            <td><img src="@Model.Imagen" style="height:150px; width:150px" /></td>
+            <td>@Model.Descripcion</td>
+        </tr>
+    </tbody>
+</table>
